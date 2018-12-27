@@ -3,10 +3,16 @@ Ce script bash permet à un pentesteur de tester une paire identifiant/mdp sur u
 Ce script permet donc d'automatiser des connexions ssh sur plusieurs serveurs.
 
 1 - Paquets à installer : sshpass
-      Ubuntu : sudo apt install sshpass
-      CentOS : yum install sshpass
+
+   Ubuntu :
+
+      sudo apt install sshpass
+   CentOS :
+   
+      yum install sshpass
       
 2 - Modifier les variables
+
       user="utilisateur_a_tester" (changer la valeur de cette variable et y insérer le nom d'utilisateur à tester)
       mdp="mot_de_passe_a_tester" (changer la valeur de cette variable et y insérer le mot de passe à tester)
       
