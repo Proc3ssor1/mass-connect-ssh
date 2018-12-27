@@ -18,28 +18,29 @@ Ce script permet donc d'automatiser des connexions ssh sur plusieurs serveurs.
       
 6 - Exemple
 
-    mass-connect-ssh.sh
-#!/bin/bash
+    ./mass-connect-ssh.sh
+    
+      #!/bin/bash
 
-## Author :	Proc3ssor
-## Contact : jeanjestin@gmail.com
+      ## Author :	Proc3ssor
+      ## Contact : jeanjestin@gmail.com
 
-arr=(
-serveur1.com
-serveur2.com
-serveur3.net
-exemple.net
-)
-length=${#arr[@]}
-user="root"
-mdp="12345"
+      arr=(
+      serveur1.com
+      serveur2.com
+      serveur3.net
+      exemple.net
+      )
+      length=${#arr[@]}
+      user="root"
+      mdp="12345"
 
-for ((i=0; i<$length; i++))
-do
-sshpass -p $mdp ssh -o ConnectTimeout=1 -o StrictHostKeyChecking=no -o GSSAPIAuthentication=no  $user@${arr[i]} "hostname" >> host.txt
-done
+      for ((i=0; i<$length; i++))
+      do
+      sshpass -p $mdp ssh -o ConnectTimeout=1 -o StrictHostKeyChecking=no -o GSSAPIAuthentication=no  $user@${arr[i]} "hostname" >> host.txt
+      done
 
-     host.txt
+   host.txt
 serveur2.com
 exemple.net
 
