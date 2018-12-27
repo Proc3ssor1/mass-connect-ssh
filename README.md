@@ -40,7 +40,8 @@ Ce script permet donc d'automatiser des connexions ssh sur plusieurs serveurs.
       sshpass -p $mdp ssh -o ConnectTimeout=1 -o StrictHostKeyChecking=no -o GSSAPIAuthentication=no  $user@${arr[i]} "hostname" >> host.txt
       done
 
-    host.txt
+   host.txt
+   
     serveur2.com
     exemple.net
 
